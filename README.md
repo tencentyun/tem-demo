@@ -19,3 +19,19 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--spring.cloud.consul.discovery.
 curl localhost:8080
 curl localhost:8080/actuator/health
 ```
+
+## Eureka
+
+```
+# in eureka-server
+mvn spring-boot:run
+# debug to see requests
+mvn spring-boot:run -Dspring-boot.run.arguments=--logging.level.root=DEBUG
+```
+
+```
+# in eureka-client
+mvn spring-boot:run
+# use healthcheck
+mvn spring-boot:run -Dspring-boot.run.arguments=--eureka.client.healthcheck.enabled=true
+```
