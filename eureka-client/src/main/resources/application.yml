@@ -2,7 +2,7 @@ spring:
   application:
     name: eureka-client
 server:
-  port: 8080
+  port: 8004
 #eureka:
 #  client:
 #    healthcheck:

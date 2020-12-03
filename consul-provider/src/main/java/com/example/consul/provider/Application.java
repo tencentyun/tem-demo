@@ -1,4 +1,4 @@
-package com.example.consul;
+package com.example.consul.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 public class Application {
-	@RequestMapping("/")
+	@RequestMapping("/ping")
 	public String home() {
-		return "Hello world";
+		return "pong";
 	}
 
 	public static void main(String[] args) {

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: consul-provider
+  cloud:
+    consul:
+      discovery:
+        heartbeat:
+          enabled: true
+server:
+  port: 8002
+management:
+  endpoint:
+    health:
+      show-details: always

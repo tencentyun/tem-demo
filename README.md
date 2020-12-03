@@ -1,6 +1,6 @@
 Demo for spring-cloud
 
-## consul
+## consul registry
 
 Run consul locally
 ```
@@ -8,16 +8,30 @@ docker run --rm -p 8500:8500 -p 8600:8600/udp consul
 ```
 
 ```
-# in consul
+# in consul-provider, default is heartbeat(TTL)
 mvn spring-boot:run
 # debug
 mvn spring-boot:run -Dspring-boot.run.arguments=--logging.level.root=DEBUG
-# enable heartbeat
+# disable heartbeat to use /actuator/health
 # https://docs.spring.io/spring-cloud-consul/docs/2.2.4.RELEASE/reference/html/appendix.html
-mvn spring-boot:run -Dspring-boot.run.arguments=--spring.cloud.consul.discovery.heartbeat.enabled=true
+mvn spring-boot:run -Dspring-boot.run.arguments=--spring.cloud.consul.discovery.heartbeat.enabled=false
 
-curl localhost:8080
-curl localhost:8080/actuator/health
+curl localhost:8002/ping
+curl localhost:8002/actuator/health
+```
+
+## consul discovery
+
+Run consul locally
+
+```
+# in consul-provider (:8002)
+mvn spring-boot:run
+
+# in consul-consumer (:8001)
+mvn spring-boot:run
+
+curl localhost:8001/ping-provider
 ```
 
 ## Eureka
@@ -44,13 +58,13 @@ mvn spring-boot:run
 ```
 
 ```
-# in eureka-client (:8080)
+# in eureka-client (:8004)
 mvn spring-boot:run
 ```
 
 ```
-# in ribbon (:8001)
+# in ribbon (:8003)
 mvn spring-boot:run
 ```
 
-Call `localhost:8001/eureka-ping`
+Call `localhost:8003/eureka-ping`

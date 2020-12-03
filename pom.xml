@@ -68,7 +68,8 @@
 	</build>
 
 	<modules>
-		<module>consul</module>
+		<module>consul-provider</module>
+		<module>consul-consumer</module>
 		<module>eureka-server</module>
 		<module>eureka-client</module>
 		<module>ribbon</module>
