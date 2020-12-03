@@ -35,3 +35,22 @@ mvn spring-boot:run
 # use healthcheck
 mvn spring-boot:run -Dspring-boot.run.arguments=--eureka.client.healthcheck.enabled=true
 ```
+
+## Ribbon
+
+```
+# in eureka-server
+mvn spring-boot:run
+```
+
+```
+# in eureka-client (:8080)
+mvn spring-boot:run
+```
+
+```
+# in ribbon (:8001)
+mvn spring-boot:run
+```
+
+Call `localhost:8001/eureka-ping`

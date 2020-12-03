@@ -3,10 +3,10 @@ spring:
     name: eureka-client
 server:
   port: 8080
-eureka:
-  client:
-    healthcheck:
-      enabled: true
+#eureka:
+#  client:
+#    healthcheck:
+#      enabled: true
 management:
   endpoint:
     health:

@@ -30,6 +30,11 @@
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<exclusions>
@@ -66,6 +71,7 @@
 		<module>consul</module>
 		<module>eureka-server</module>
 		<module>eureka-client</module>
+		<module>ribbon</module>
 	</modules>
 
 </project>

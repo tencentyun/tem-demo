@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ribbon
+
+server:
+  port: 8001
+
+# eureka-client acts as a service to call here
+eureka-client:
+  ribbon:
+    eureka:
+      enabled: true
+    ServerListRefreshInterval: 15000
