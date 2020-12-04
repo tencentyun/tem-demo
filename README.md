@@ -34,7 +34,7 @@ mvn spring-boot:run
 curl localhost:8001/ping-provider
 ```
 
-## Eureka
+## Eureka registry
 
 ```
 # in eureka-server
@@ -44,13 +44,15 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--logging.level.root=DEBUG
 ```
 
 ```
-# in eureka-client
+# in eureka-provider
 mvn spring-boot:run
 # use healthcheck
 mvn spring-boot:run -Dspring-boot.run.arguments=--eureka.client.healthcheck.enabled=true
 ```
 
-## Ribbon
+## Eureka discovery
+
+> Feign & Ribbon are used
 
 ```
 # in eureka-server
@@ -58,12 +60,12 @@ mvn spring-boot:run
 ```
 
 ```
-# in eureka-client (:8004)
+# in eureka-provider (:8004)
 mvn spring-boot:run
 ```
 
 ```
-# in ribbon (:8003)
+# in eureka-consumer (:8003)
 mvn spring-boot:run
 ```
 

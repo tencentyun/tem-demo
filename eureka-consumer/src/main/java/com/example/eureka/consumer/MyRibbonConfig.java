@@ -1,4 +1,4 @@
-package com.example.ribbon;
+package com.example.eureka.consumer;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.*;
@@ -9,7 +9,7 @@ public class MyRibbonConfig {
     @Autowired
     IClientConfig ribbonClientConfig;
 
-//    Don't use this by default because it calls `/` of upstream to determine if it's UP
+//    Don't use this because it calls `/` of upstream to determine if it's UP
 //    @Bean
 //    public IPing ribbonPing(IClientConfig config) {
 //        return new PingUrl();

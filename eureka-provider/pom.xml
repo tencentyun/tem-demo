@@ -7,10 +7,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>eureka-client</artifactId>
+  <artifactId>eureka-provider</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>eureka-client</name>
+  <name>eureka-provider</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 

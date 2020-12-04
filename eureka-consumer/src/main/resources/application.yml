@@ -1,12 +1,12 @@
 spring:
   application:
-    name: ribbon
+    name: eureka-consumer
 
 server:
   port: 8003
 
-# eureka-client acts as a service to call here
-eureka-client:
+# eureka-provider acts as a service to call here
+eureka-provider:
   ribbon:
     eureka:
       enabled: true
