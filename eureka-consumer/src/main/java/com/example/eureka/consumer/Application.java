@@ -31,8 +31,8 @@ public class Application {
     @Autowired
     private ProviderClient providerClient;
 
-    @RequestMapping("/eureka-ping")
-    public String eurekaPing() {
+    @RequestMapping("/ping-provider")
+    public String pingProvider() {
         return providerClient.ping();
     }
 

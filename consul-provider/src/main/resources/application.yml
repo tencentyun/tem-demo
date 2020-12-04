@@ -6,6 +6,9 @@ spring:
       discovery:
         heartbeat:
           enabled: true
+    loadbalancer:
+      ribbon:
+        enabled: false
 server:
   port: 8002
 management:

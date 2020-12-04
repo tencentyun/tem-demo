@@ -22,7 +22,7 @@ public class Application {
 	RestTemplate restTemplate;
 
 	@RequestMapping("/ping-provider")
-	public String home() {
+	public String pingProvider() {
 		return this.restTemplate.getForObject("http://consul-provider/ping", String.class);
 	}
 

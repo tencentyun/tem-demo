@@ -22,6 +22,8 @@ curl localhost:8002/actuator/health
 
 ## consul discovery
 
+> RestTemplate & spring-cloud-loadbalancer(not ribbon) are used
+
 Run consul locally
 
 ```
@@ -69,4 +71,4 @@ mvn spring-boot:run
 mvn spring-boot:run
 ```
 
-Call `localhost:8003/eureka-ping`
+Call `localhost:8003/ping-provider`
