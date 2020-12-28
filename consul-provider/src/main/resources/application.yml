@@ -2,10 +2,11 @@ spring:
   application:
     name: consul-provider
   cloud:
-    consul:
-      discovery:
-        heartbeat:
-          enabled: true
+#    consul:
+#      discovery:
+#        heartbeat:
+#          enabled: true
+
     loadbalancer:
       ribbon:
         enabled: false
@@ -15,3 +16,9 @@ management:
   endpoint:
     health:
       show-details: always
+
+
+  endpoints:
+    web:
+      exposure:
+        include: info,health,env
