@@ -73,6 +73,7 @@
 		<module>eureka-provider</module>
 		<module>eureka-consumer</module>
 		<module>eureka-server</module>
+		<module>common</module>
 	</modules>
 
 </project>
