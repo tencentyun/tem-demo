@@ -1,5 +1,7 @@
 package com.example.eureka.consumer;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -31,8 +33,11 @@ public class Application {
     @Autowired
     private ProviderClient providerClient;
 
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @RequestMapping("/ping-provider")
     public String pingProvider() {
+        logger.info("got /ping-provider");
         return providerClient.ping() + " via " + AppName.name("eureka-provider");
     }
 
