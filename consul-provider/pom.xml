@@ -4,11 +4,11 @@
   <parent>
     <artifactId>demo</artifactId>
     <groupId>com.example</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
   </parent>
 
   <artifactId>consul-provider</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>${revision}</version>
 
   <name>consul-provider</name>
   <!-- FIXME change it to the project's website -->
@@ -25,13 +25,6 @@
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-consul-discovery</artifactId>
     </dependency>
-
-    <dependency>
-        <groupId>com.example</groupId>
-        <artifactId>common</artifactId>
-        <version>${project.version}</version>
-    </dependency>
-
   </dependencies>
 
   <build>

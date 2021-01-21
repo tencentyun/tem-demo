@@ -1,4 +1,4 @@
-package com.example.common;
+package com.example.consul.provider;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -11,6 +11,6 @@ public class AppName {
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
-        return "pong from " + appName + "(" + hostname + ")";
+        return appName + "(" + hostname + ")";
     }
 }
