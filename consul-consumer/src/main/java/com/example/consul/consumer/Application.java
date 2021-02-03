@@ -23,7 +23,7 @@ public class Application {
 
 	@RequestMapping("/ping-provider")
 	public String pingProvider() {
-		return this.restTemplate.getForObject("http://consul-provider/ping", String.class);
+		return this.restTemplate.getForObject("http://consul-provider/ping", String.class) + " via " + AppName.name("consul-consumer");
 	}
 
 	public static void main(String[] args) {

@@ -33,7 +33,7 @@ public class Application {
 
     @RequestMapping("/ping-provider")
     public String pingProvider() {
-        return providerClient.ping();
+        return providerClient.ping() + " via " + AppName.name("eureka-provider");
     }
 
     public static void main(String[] args) {
